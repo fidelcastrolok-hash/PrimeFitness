@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, fantasy;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    padding-top: 80px;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-text {
+    color: gold;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+
+/* NAV HOVER */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* VIDEO SECTION */
+.video {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+/* OVERLAY */
+.video::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+/* HOME TEXT */
+.home {
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+.home h1 {
+    font-size: 80px;
+}
+
+.home p {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/*About*/
+.about-info{ 
+       display: flex;
+       padding: 20px;
+       justify-content: center;
+       height: 60vh;
+       font-size: 20px;
+      
+
+}
+.about-info img{
+    border-radius:10px ;
+}
+
+.paragh{
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 4%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.paraghy{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    margin-top: 4%;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+/* SERVICES & BOOKING */
+.service-list,
+.booking-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+}
+
+/* CARDS */
+.serv, .card {
+    width:400px;
+    height: 500px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.serv:hover, .card:hover {
+    transform: translateY(-10px);
+}
+
+.serv img, .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.servt{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20px;
+}
+
+/* BUTTON */
+.booking{
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* FORM */
+.contact{
+    background-color: gold;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+
+}
+
+.contt{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 4%;
+    margin-bottom: 30px;
+    font-size: larger;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: gold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: gold;
+    padding: 10px;
+    text-align: center;
+} 
+
+
+.footer-links { display: flex; gap: 1.5rem;}
+.footer-links a {
+    text-align: center;
+  font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color 0.2s; 
+}
+.footer-links a:hover { color: var(--ink); }
+.footer,p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    nav ul {
+        display: none;
+    }
+
+    .home h1 {
+        font-size: 28px;
+    }
+}
