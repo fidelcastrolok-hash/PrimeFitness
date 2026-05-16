@@ -46,6 +46,10 @@ nav img {
     letter-spacing: 2px;
 }
 
+.logo-text:hover {
+color: #fff;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -279,6 +283,10 @@ footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+
+.padd{
+    padding-top: 4%;
+}
 
 /* RESPONSIVE */
 @media(max-width: 768px){

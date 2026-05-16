@@ -214,6 +214,19 @@ nav {
 .card-title { font-family: var(--serif); font-size: 1.25rem; margin-bottom: 0.5rem; }
 .card-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
 
+.prime a {
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
+  color:#1a1714;
+}
+
+.web {
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+
 /* ── CONTACT ─────────────────────────────── */
 #contact {
   padding: 8rem 3rem;
